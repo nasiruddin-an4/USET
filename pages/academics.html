@@ -493,13 +493,13 @@
                 .then(response => response.json())
                 .then(data => {
                     const faculties = data.faculties;
-                    const facultiesContainer = document.getElementById('faculties-container');
-                    const programsContainer = document.getElementById('programs-container');
+                    const facultiescontainer = document.getElementById('faculties-container');
+                    const programscontainer = document.getElementById('programs-container');
                     const facultySelect = document.getElementById('programFaculty');
                     
                     // Clear containers
-                    facultiesContainer.innerHTML = '';
-                    programsContainer.innerHTML = '';
+                    facultiescontainer.innerHTML = '';
+                    programscontainer.innerHTML = '';
                     
                     // Load faculties
                     faculties.forEach(faculty => {
@@ -526,7 +526,7 @@
                                 </div>
                             </div>
                         `;
-                        facultiesContainer.appendChild(facultyColumn);
+                        facultiescontainer.appendChild(facultyColumn);
                         
                         // Add faculty to select dropdown
                         const option = document.createElement('option');
@@ -552,7 +552,7 @@
                                     </div>
                                 </div>
                             `;
-                            programsContainer.appendChild(programColumn);
+                            programscontainer.appendChild(programColumn);
                         }
                     });
                     

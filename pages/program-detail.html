@@ -484,8 +484,8 @@
                     document.getElementById('total-credits').textContent = program.credits || '144 Credits';
                     
                     // Create program objectives
-                    const objectivesContainer = document.getElementById('program-objectives');
-                    objectivesContainer.innerHTML = '';
+                    const objectivescontainer = document.getElementById('program-objectives');
+                    objectivescontainer.innerHTML = '';
                     
                     const objectives = [
                         'Provide students with a strong foundation in theoretical and practical aspects of the field',
@@ -502,12 +502,12 @@
                             <i class="fas fa-check-circle text-success mr-3 mt-1"></i>
                             <span>${objective}</span>
                         `;
-                        objectivesContainer.appendChild(li);
+                        objectivescontainer.appendChild(li);
                     });
                     
                     // Career opportunities
-                    const careerContainer = document.getElementById('career-opportunities');
-                    careerContainer.innerHTML = '';
+                    const careercontainer = document.getElementById('career-opportunities');
+                    careercontainer.innerHTML = '';
                     
                     // Use conditional career paths based on program name/field
                     let careerPaths = [];
@@ -555,15 +555,15 @@
                                 </div>
                             </div>
                         `;
-                        careerContainer.appendChild(column);
+                        careercontainer.appendChild(column);
                     });
                     
                     // Create sample curriculum
                     createSampleCurriculum();
                     
                     // Load related programs (other programs from same faculty)
-                    const relatedProgramsContainer = document.getElementById('related-programs');
-                    relatedProgramsContainer.innerHTML = '';
+                    const relatedProgramscontainer = document.getElementById('related-programs');
+                    relatedProgramscontainer.innerHTML = '';
                     
                     faculty.programs.forEach(relatedProgram => {
                         if (relatedProgram.id !== programId) {
@@ -582,7 +582,7 @@
                                     </div>
                                 </div>
                             `;
-                            relatedProgramsContainer.appendChild(column);
+                            relatedProgramscontainer.appendChild(column);
                         }
                     });
                     
@@ -590,7 +590,7 @@
                     if (faculty.programs.length <= 2) {
                         // Find programs from other faculties
                         data.faculties.forEach(otherFaculty => {
-                            if (otherFaculty.id !== facultyId && relatedProgramsContainer.children.length < 3) {
+                            if (otherFaculty.id !== facultyId && relatedProgramscontainer.children.length < 3) {
                                 const randomProgram = otherFaculty.programs[0];
                                 if (randomProgram) {
                                     const column = document.createElement('div');
@@ -608,7 +608,7 @@
                                             </div>
                                         </div>
                                     `;
-                                    relatedProgramsContainer.appendChild(column);
+                                    relatedProgramscontainer.appendChild(column);
                                 }
                             }
                         });
@@ -639,8 +639,8 @@
                             throw new Error('Department not found');
                         }
                         
-                        const facultyContainer = document.getElementById('department-faculty');
-                        facultyContainer.innerHTML = '';
+                        const facultycontainer = document.getElementById('department-faculty');
+                        facultycontainer.innerHTML = '';
                         
                         // Display top 2 faculty members
                         department.faculty.slice(0, 2).forEach(member => {
@@ -657,13 +657,13 @@
                                 </div>
                             `;
                             
-                            facultyContainer.appendChild(faculty);
+                            facultycontainer.appendChild(faculty);
                         });
                     })
                     .catch(error => {
                         console.error('Error loading faculty data:', error);
-                        const facultyContainer = document.getElementById('department-faculty');
-                        facultyContainer.innerHTML = '<p class="text-center text-muted">Faculty information not available</p>';
+                        const facultycontainer = document.getElementById('department-faculty');
+                        facultycontainer.innerHTML = '<p class="text-center text-muted">Faculty information not available</p>';
                     });
             }
             

@@ -238,9 +238,9 @@
                 .then(response => response.json())
                 .then(data => {
                     const departments = data.departments;
-                    const tabsContainer = document.getElementById('departmentTabs');
-                    const tabContentContainer = document.getElementById('departmentTabContent');
-                    const allFacultyContainer = document.getElementById('all-faculty');
+                    const tabscontainer = document.getElementById('departmentTabs');
+                    const tabContentcontainer = document.getElementById('departmentTabContent');
+                    const allFacultycontainer = document.getElementById('all-faculty');
                     
                     // Create department tabs
                     departments.forEach((dept, index) => {
@@ -252,7 +252,7 @@
                                 ${dept.name.split(' ').slice(-1)[0]}
                             </a>
                         `;
-                        tabsContainer.appendChild(tabItem);
+                        tabscontainer.appendChild(tabItem);
                         
                         // Create tab pane
                         const tabPane = document.createElement('div');
@@ -282,11 +282,11 @@
                             deptFacultyRow.appendChild(facultyCard.cloneNode(true));
                             
                             // Add to all faculty tab
-                            allFacultyContainer.appendChild(facultyCard);
+                            allFacultycontainer.appendChild(facultyCard);
                         });
                         
                         tabPane.appendChild(deptFacultyRow);
-                        tabContentContainer.appendChild(tabPane);
+                        tabContentcontainer.appendChild(tabPane);
                     });
                 })
                 .catch(error => console.error('Error loading faculty data:', error));

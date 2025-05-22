@@ -63,31 +63,40 @@ document.addEventListener('DOMContentLoaded', function() {
   $('[data-toggle="popover"]').popover();
   
   // Animate stats numbers
+  function animateStats() {
+    const stats = document.querySelectorAll('.stat-value');
+    
+    stats.forEach(stat => {
+        const target = parseInt(stat.getAttribute('data-target'));
+        const duration = 2000; // Animation duration in milliseconds
+        const steps = 50; // Number of steps in animation
+        const stepValue = target / steps;
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += stepValue;
+            stat.textContent = Math.round(current);
+            
+            if (current >= target) {
+                stat.textContent = target;
+                clearInterval(timer);
+            }
+        }, duration / steps);
+    });
+  }
+
+  // Trigger animation when section is in view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateStats();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
   const statsSection = document.querySelector('.stats-section');
   if (statsSection) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          document.querySelectorAll('.stat-value').forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'), 10);
-            let count = 0;
-            const updateCounter = () => {
-              if (count < target) {
-                count += Math.ceil(target / 20);
-                if (count > target) count = target;
-                counter.textContent = count;
-                setTimeout(updateCounter, 50);
-              } else {
-                counter.textContent = target;
-              }
-            };
-            updateCounter();
-          });
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    
     observer.observe(statsSection);
   }
 });

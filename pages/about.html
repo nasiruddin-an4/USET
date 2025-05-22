@@ -440,7 +440,7 @@
                 .then(response => response.json())
                 .then(data => {
                     const valueProps = data.valuePropositions;
-                    const valuePropsContainer = document.getElementById('value-propositions');
+                    const valuePropscontainer = document.getElementById('value-propositions');
                     
                     valueProps.forEach(prop => {
                         const column = document.createElement('div');
@@ -458,7 +458,7 @@
                             </div>
                         `;
                         
-                        valuePropsContainer.appendChild(column);
+                        valuePropscontainer.appendChild(column);
                     });
                 })
                 .catch(error => console.error('Error loading value propositions:', error));
