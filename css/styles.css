@@ -675,6 +675,107 @@ body {
     box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
 }
 
+/* CTA Section Styles */
+.cta-section {
+    background: #198754;
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+
+.cta-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section .badge {
+    background: rgba(255, 255, 255, 0.9);
+    color: #28a745;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-white-75 {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.cta-buttons .btn {
+    padding: 1rem 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-buttons .btn-light {
+    background: #ffffff;
+    border: none;
+}
+
+.cta-buttons .btn-outline-light {
+    border-width: 2px;
+}
+
+.cta-feature {
+    color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+}
+
+/* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.2);
+}
+
+.back-to-top i {
+    font-size: 1.2rem;
+}
+
 @media (max-width: 768px) {
   .hero-section {
     min-height: 60vh;
@@ -715,3 +816,20 @@ body {
         text-align: center;
     }
 }
+
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 60px 0;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    
+    .cta-feature {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
