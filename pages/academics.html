@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore academic programs at USET - University of Skill Enrichment & Technology. Discover our faculties, departments, and industry-relevant degree programs.">
+    <title>Academics | University of Skill Enrichment & Technology</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap 4.5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <img src="../img/uset_homepage_full.png" alt="USET Logo" class="mr-2">
+                    <div class="d-none d-md-block">
+                        <h5 class="mb-0 font-weight-bold text-success university-short-name">USET</h5>
+                        <small class="text-muted university-slogan">Bangladesh's First Skill-Based University</small>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto mr-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="academics.html">Academics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admission.html">Admission</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faculty.html">Faculty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="student-life.html">Student Life</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news-events.html">News & Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="admission.html" class="btn btn-success d-none d-md-block">Apply Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 mb-4">Academics</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-transparent p-0">
+                                <li class="breadcrumb-item"><a href="../index.html" class="text-white">Home</a></li>
+                                <li class="breadcrumb-item active text-white" aria-current="page">Academics</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Academic Vision -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="../img/uset_academic_vision.png" alt="USET Academic Vision" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="h1 mb-4 text-success">Our Academic Vision</h2>
+                        <p class="lead mb-4">USET is committed to providing industry-relevant education that prepares students for the demands of today's workplace.</p>
+                        <p>Our academic programs are designed with direct input from industry leaders to ensure that graduates possess both theoretical knowledge and practical skills needed for professional success.</p>
+                        <p>We follow the dual technical education system modeled after successful European approaches, combining classroom learning with hands-on experience through laboratory work, projects, and internships.</p>
+                        <div class="d-flex">
+                            <div class="bg-success text-white p-2 rounded-circle mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="mb-2"><strong>Practice-Oriented Learning:</strong> Emphasis on practical skills development</p>
+                        </div>
+                        <div class="d-flex">
+                            <div class="bg-success text-white p-2 rounded-circle mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="mb-2"><strong>Industry Integration:</strong> Curriculum designed with industry partners</p>
+                        </div>
+                        <div class="d-flex">
+                            <div class="bg-success text-white p-2 rounded-circle mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="mb-0"><strong>Professional Mentorship:</strong> Faculty with extensive industry experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Faculty & Departments -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="h1 mb-4">Our Faculties & Departments</h2>
+                    <p class="lead mb-0">Explore our diverse academic offerings across multiple disciplines</p>
+                </div>
+                
+                <div class="row" id="faculties-container">
+                    <!-- Faculties will be loaded here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Programs & Courses -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="h1 mb-4">Featured Programs</h2>
+                    <p class="lead mb-0">Discover our industry-relevant academic programs</p>
+                </div>
+                
+                <div class="row" id="programs-container">
+                    <!-- Programs will be loaded here -->
+                </div>
+                
+                <!-- Program Filter -->
+                <div class="card border-0 shadow-sm mt-5">
+                    <div class="card-body p-4">
+                        <h3 class="h4 mb-4">Find Your Program</h3>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="programLevel">Program Level</label>
+                                <select class="form-control" id="programLevel">
+                                    <option value="all">All Levels</option>
+                                    <option value="undergraduate">Undergraduate</option>
+                                    <option value="graduate">Graduate</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="programFaculty">Faculty</label>
+                                <select class="form-control" id="programFaculty">
+                                    <option value="all">All Faculties</option>
+                                    <!-- Faculties will be loaded here -->
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="programSearch">Search</label>
+                                <input type="text" class="form-control" id="programSearch" placeholder="Search programs...">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-success mt-2" id="searchButton">Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Academic Systems & Standards -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="h1 mb-4">Academic Systems & Standards</h2>
+                    <p class="lead mb-0">Our commitment to academic excellence and quality education</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 text-success mb-3">Grading System</h3>
+                                <p>USET follows a standard letter grading system to evaluate student performance:</p>
+                                <table class="table table-sm">
+                                    <thead class="bg-light">
+                                        <tr>
+                                            <th>Grade</th>
+                                            <th>Points</th>
+                                            <th>Percentage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>A+</td>
+                                            <td>4.00</td>
+                                            <td>90-100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>A</td>
+                                            <td>3.75</td>
+                                            <td>85-89%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>A-</td>
+                                            <td>3.50</td>
+                                            <td>80-84%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>B+</td>
+                                            <td>3.25</td>
+                                            <td>75-79%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>B</td>
+                                            <td>3.00</td>
+                                            <td>70-74%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 text-success mb-3">Credit System</h3>
+                                <p>Our programs follow a credit hour system that measures academic workload:</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-transparent">
+                                        <strong>1 Credit Hour:</strong> 15 hours of classroom instruction per semester
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <strong>Laboratory/Practical:</strong> 30-45 hours of supervised laboratory work equals 1 credit hour
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <strong>Internship/Fieldwork:</strong> 45 hours of supervised practical training equals 1 credit hour
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <strong>Undergraduate Degree:</strong> Typically requires 120-144 credit hours
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <strong>Graduate Degree:</strong> Typically requires 30-36 credit hours
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 text-success mb-3">Academic Calendar</h3>
+                                <p>The academic year at USET is divided into two main semesters with an optional summer term:</p>
+                                <div class="accordion" id="calendarAccordion">
+                                    <div class="card mb-2 border">
+                                        <div class="card-header bg-white" id="fallHeading">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left text-success" type="button" data-toggle="collapse" data-target="#fallCollapse" aria-expanded="true" aria-controls="fallCollapse">
+                                                    Fall Semester (September - December)
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <div id="fallCollapse" class="collapse show" aria-labelledby="fallHeading" data-parent="#calendarAccordion">
+                                            <div class="card-body">
+                                                <ul class="list-unstyled mb-0">
+                                                    <li><strong>Registration:</strong> Late August</li>
+                                                    <li><strong>Classes Begin:</strong> First week of September</li>
+                                                    <li><strong>Midterm Exams:</strong> Late October</li>
+                                                    <li><strong>Final Exams:</strong> Mid-December</li>
+                                                    <li><strong>Semester Break:</strong> Late December - Early January</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-2 border">
+                                        <div class="card-header bg-white" id="springHeading">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left collapsed text-success" type="button" data-toggle="collapse" data-target="#springCollapse" aria-expanded="false" aria-controls="springCollapse">
+                                                    Spring Semester (January - May)
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <div id="springCollapse" class="collapse" aria-labelledby="springHeading" data-parent="#calendarAccordion">
+                                            <div class="card-body">
+                                                <ul class="list-unstyled mb-0">
+                                                    <li><strong>Registration:</strong> Early January</li>
+                                                    <li><strong>Classes Begin:</strong> Mid-January</li>
+                                                    <li><strong>Midterm Exams:</strong> Early March</li>
+                                                    <li><strong>Final Exams:</strong> Early May</li>
+                                                    <li><strong>Semester Break:</strong> Mid-May - June</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card border">
+                                        <div class="card-header bg-white" id="summerHeading">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left collapsed text-success" type="button" data-toggle="collapse" data-target="#summerCollapse" aria-expanded="false" aria-controls="summerCollapse">
+                                                    Summer Term (June - August)
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <div id="summerCollapse" class="collapse" aria-labelledby="summerHeading" data-parent="#calendarAccordion">
+                                            <div class="card-body">
+                                                <ul class="list-unstyled mb-0">
+                                                    <li><strong>Registration:</strong> Late May</li>
+                                                    <li><strong>Classes Begin:</strong> First week of June</li>
+                                                    <li><strong>Final Exams:</strong> Early August</li>
+                                                    <li><strong>Break:</strong> Mid-August - Late August</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 text-success mb-3">Academic Support Services</h3>
+                                <p>USET provides comprehensive support to help students succeed in their academic journey:</p>
+                                <div class="d-flex mb-3">
+                                    <div class="mr-3 text-success">
+                                        <i class="fas fa-book-reader fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 font-weight-bold">Academic Advising</h4>
+                                        <p class="mb-0 text-muted">Personalized guidance for course selection and academic planning</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="mr-3 text-success">
+                                        <i class="fas fa-chalkboard-teacher fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 font-weight-bold">Tutoring Services</h4>
+                                        <p class="mb-0 text-muted">Free peer and faculty tutoring for challenging courses</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="mr-3 text-success">
+                                        <i class="fas fa-laptop-code fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 font-weight-bold">Learning Resources</h4>
+                                        <p class="mb-0 text-muted">Digital library, research databases, and computer laboratories</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="mr-3 text-success">
+                                        <i class="fas fa-user-graduate fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 font-weight-bold">Career Development</h4>
+                                        <p class="mb-0 text-muted">Career counseling, resume workshops, and interview preparation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-5 bg-success text-white">
+            <div class="container text-center">
+                <h2 class="h1 mb-4">Ready to Begin Your Academic Journey?</h2>
+                <p class="lead mb-5">Take the first step toward gaining industry-relevant skills and knowledge at USET.</p>
+                <div class="d-flex justify-content-center flex-wrap">
+                    <a href="admission.html" class="btn btn-light btn-lg text-success mr-3 mb-3">Apply Now</a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg mb-3">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- University Info -->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h5 class="university-short-name">USET</h5>
+                    <p class="mb-4">
+                        <span class="university-name">University of Skill Enrichment & Technology</span> is the first skill-based university in Bangladesh, 
+                        committed to providing industry-relevant education to prepare students for the 
+                        demands of today's workplace.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="facebook-link" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="twitter-link" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="linkedin-link" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="instagram-link" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-md-4 col-lg-2 mb-5 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Programs</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="student-life.html">Student Life</a></li>
+                        <li><a href="news-events.html">News & Events</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Important Links -->
+                <div class="col-md-4 col-lg-2 mb-5 mb-lg-0">
+                    <h5>Important Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html#mission-vision">Mission & Vision</a></li>
+                        <li><a href="academics.html#calendar">Academic Calendar</a></li>
+                        <li><a href="about.html#campus">Campus Facilities</a></li>
+                        <li><a href="admission.html#scholarships">Scholarships</a></li>
+                        <li><a href="admission.html#tuition">Tuition & Fees</a></li>
+                        <li><a href="#">Student Portal</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-md-4 col-lg-4">
+                    <h5>Contact Us</h5>
+                    <address class="mb-4">
+                        <p class="d-flex align-items-center mb-3">
+                            <i class="fas fa-map-marker-alt mr-3 contact-icon"></i>
+                            <span class="university-address">Loading address...</span>
+                        </p>
+                        <p class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone mr-3 contact-icon"></i>
+                            <a href="tel:" class="text-white-50 university-phone">Loading phone...</a>
+                        </p>
+                        <p class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope mr-3 contact-icon"></i>
+                            <a href="mailto:" class="text-white-50 university-email">Loading email...</a>
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p class="mb-0">
+                    &copy; <span class="copyright-year">2025</span> 
+                    <span class="university-name">University of Skill Enrichment & Technology</span>. 
+                    All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/header.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load faculties and programs
+            fetch('../data/programs.json')
+                .then(response => response.json())
+                .then(data => {
+                    const faculties = data.faculties;
+                    const facultiesContainer = document.getElementById('faculties-container');
+                    const programsContainer = document.getElementById('programs-container');
+                    const facultySelect = document.getElementById('programFaculty');
+                    
+                    // Clear containers
+                    facultiesContainer.innerHTML = '';
+                    programsContainer.innerHTML = '';
+                    
+                    // Load faculties
+                    faculties.forEach(faculty => {
+                        // Create faculty card
+                        const facultyColumn = document.createElement('div');
+                        facultyColumn.className = 'col-md-6 mb-4';
+                        facultyColumn.innerHTML = `
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="h5 text-success mb-3">${faculty.name}</h3>
+                                    <p class="text-muted mb-4">Offers programs focused on providing students with practical skills and knowledge in ${faculty.name.split(' ').pop().toLowerCase()} fields.</p>
+                                    <h4 class="h6 mb-2">Programs Offered:</h4>
+                                    <ul class="list-unstyled mb-4">
+                                        ${faculty.programs.map(program => `
+                                            <li class="mb-1">
+                                                <i class="fas fa-graduation-cap text-success mr-2"></i>
+                                                <a href="program-detail.html?faculty=${faculty.id}&program=${program.id}" class="text-dark">
+                                                    ${program.name}
+                                                </a>
+                                            </li>
+                                        `).join('')}
+                                    </ul>
+                                    <a href="#" class="btn btn-sm btn-outline-success">Learn More</a>
+                                </div>
+                            </div>
+                        `;
+                        facultiesContainer.appendChild(facultyColumn);
+                        
+                        // Add faculty to select dropdown
+                        const option = document.createElement('option');
+                        option.value = faculty.id;
+                        option.textContent = faculty.name;
+                        facultySelect.appendChild(option);
+                        
+                        // Add featured programs (first program from each faculty)
+                        if (faculty.programs.length > 0) {
+                            const program = faculty.programs[0];
+                            const programColumn = document.createElement('div');
+                            programColumn.className = 'col-md-6 col-lg-4 mb-4';
+                            programColumn.innerHTML = `
+                                <div class="card program-card h-100">
+                                    <div class="program-header">
+                                        <h3 class="h5 font-weight-bold mb-0">${program.name}</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="text-muted mb-4">${program.description.substring(0, 150)}...</p>
+                                        <a href="program-detail.html?faculty=${faculty.id}&program=${program.id}" class="btn btn-success btn-block">
+                                            View Program Details
+                                        </a>
+                                    </div>
+                                </div>
+                            `;
+                            programsContainer.appendChild(programColumn);
+                        }
+                    });
+                    
+                    // Handle program search
+                    document.getElementById('searchButton').addEventListener('click', function() {
+                        const level = document.getElementById('programLevel').value;
+                        const faculty = document.getElementById('programFaculty').value;
+                        const searchText = document.getElementById('programSearch').value.toLowerCase();
+                        
+                        // Display search results
+                        alert(`Search for programs with:\nLevel: ${level}\nFaculty: ${faculty}\nSearch text: ${searchText}`);
+                        
+                        // In a real implementation, this would filter and display matching programs
+                    });
+                })
+                .catch(error => console.error('Error loading programs data:', error));
+        });
+    </script>
+</body>
+</html>

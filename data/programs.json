@@ -1,0 +1,69 @@
+{
+  "faculties": [
+    {
+      "id": "business",
+      "name": "Faculty of Business",
+      "description": "The Faculty of Business at USET offers programs that combine theoretical knowledge with practical skills needed in today's global business environment.",
+      "programs": [
+        {
+          "id": "bba",
+          "name": "Bachelor of Business Administration (BBA)",
+          "duration": "4 years",
+          "credits": 128,
+          "description": "Our BBA program provides students with a solid foundation in business principles with specialized practical training in key areas including management, marketing, finance, and entrepreneurship.",
+          "career_paths": ["Business Analyst", "Marketing Manager", "Entrepreneur", "Financial Analyst", "HR Specialist"],
+          "key_courses": ["Principles of Management", "Marketing Fundamentals", "Financial Accounting", "Business Analytics", "Entrepreneurship", "Strategic Management"],
+          "admission_requirements": "HSC/A-Level with minimum GPA 3.0 or equivalent",
+          "practical_components": ["Industry internships", "Business case competitions", "Entrepreneurship projects", "Business simulation labs"]
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "name": "Faculty of Engineering",
+      "description": "The Faculty of Engineering at USET offers cutting-edge programs that combine theoretical knowledge with hands-on skills in emerging technical fields.",
+      "programs": [
+        {
+          "id": "cse",
+          "name": "B.Sc in Computer Science & Engineering",
+          "duration": "4 years",
+          "credits": 140,
+          "description": "Our CSE program prepares students with both theoretical foundations and practical skills in software development, computer systems, and emerging technologies like AI and data science.",
+          "career_paths": ["Software Engineer", "Web Developer", "Systems Analyst", "Database Administrator", "AI/ML Engineer"],
+          "key_courses": ["Data Structures & Algorithms", "Database Systems", "Web Engineering", "Artificial Intelligence", "Computer Networks", "Software Engineering"],
+          "admission_requirements": "HSC/A-Level with minimum GPA 3.5 in Science or equivalent",
+          "practical_components": ["Programming labs", "Software development projects", "Hardware design workshops", "Industry internships"]
+        }
+      ]
+    },
+    {
+      "id": "liberal-arts",
+      "name": "Faculty of Liberal Arts and Social Science",
+      "description": "The Faculty of Liberal Arts and Social Science offers programs that develop critical thinking, communication, and analytical skills essential for a variety of careers.",
+      "programs": [
+        {
+          "id": "english",
+          "name": "BA in English",
+          "duration": "4 years",
+          "credits": 126,
+          "description": "Our English program provides comprehensive education in English literature, language, and communication skills with practical applications in professional settings.",
+          "career_paths": ["Content Writer", "Teacher", "Editor", "Communications Specialist", "Public Relations Officer"],
+          "key_courses": ["English Literature", "Professional Communication", "Content Development", "Linguistics", "Creative Writing", "Technical Writing"],
+          "admission_requirements": "HSC/A-Level with minimum GPA 3.0 or equivalent",
+          "practical_components": ["Writing workshops", "Publication projects", "Communication labs", "Professional content development"]
+        },
+        {
+          "id": "economics",
+          "name": "BSS in Economics",
+          "duration": "4 years",
+          "credits": 126,
+          "description": "Our Economics program combines theoretical foundations with practical tools for analyzing economic trends, policies, and development issues particularly relevant to Bangladesh.",
+          "career_paths": ["Economic Analyst", "Policy Researcher", "Financial Consultant", "Development Sector Professional", "Banking Professional"],
+          "key_courses": ["Microeconomics", "Macroeconomics", "Development Economics", "Economic Statistics", "Economic Research Methods", "Bangladesh Economy"],
+          "admission_requirements": "HSC/A-Level with minimum GPA 3.0 or equivalent",
+          "practical_components": ["Economic analysis projects", "Policy research", "Statistical analysis labs", "Development sector internships"]
+        }
+      ]
+    }
+  ]
+}

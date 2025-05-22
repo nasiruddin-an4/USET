@@ -1,0 +1,91 @@
+{
+  "departments": [
+    {
+      "id": "computer-science",
+      "name": "Department of Computer Science and Engineering",
+      "faculty": [
+        {
+          "id": "jamim-chowdhury",
+          "name": "Dr. Jamim Hossain Chowdhury",
+          "position": "Associate Professor & Chair",
+          "education": "Ph.D. in Computer Science, University of Dhaka",
+          "specialization": "Artificial Intelligence, Machine Learning",
+          "image": "/images/jamim_hossain_chowdhury_profile.png",
+          "email": "jamim.chowdhury@uset.ac.bd"
+        },
+        {
+          "id": "farhana-badhon",
+          "name": "Farhana Akter Badhon",
+          "position": "Assistant Professor",
+          "education": "M.Sc. in Computer Science & Engineering, BUET",
+          "specialization": "Databases, Web Technologies",
+          "image": "/images/farhana_akter_badhon_profile.png",
+          "email": "farhana.badhon@uset.ac.bd"
+        },
+        {
+          "id": "moumita-kabir",
+          "name": "Moumita Kabir",
+          "position": "Lecturer",
+          "education": "M.Sc. in Computer Science, Jahangirnagar University",
+          "specialization": "Computer Networks, Cybersecurity",
+          "image": "/images/moumita_kabir_profile.png",
+          "email": "moumita.kabir@uset.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "business-admin",
+      "name": "Department of Business Administration",
+      "faculty": [
+        {
+          "id": "arifur-rahman",
+          "name": "Dr. Md. Arifur Rahman",
+          "position": "Associate Professor & Chair",
+          "education": "Ph.D. in Business Administration, University of Dhaka",
+          "specialization": "Strategic Management, Entrepreneurship",
+          "image": "/images/md_arifur_rahman_profile.png",
+          "email": "arifur.rahman@uset.ac.bd"
+        },
+        {
+          "id": "shamim-ahmed",
+          "name": "Shamim Ahmed",
+          "position": "Assistant Professor",
+          "education": "MBA, Institute of Business Administration, University of Dhaka",
+          "specialization": "Marketing, Consumer Behavior",
+          "image": "/images/shamim_ahmed_profile.png",
+          "email": "shamim.ahmed@uset.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "english",
+      "name": "Department of English",
+      "faculty": [
+        {
+          "id": "sabrina-akhter",
+          "name": "Dr. Sabrina Akhter",
+          "position": "Associate Professor & Chair",
+          "education": "Ph.D. in English Literature, University of Dhaka",
+          "specialization": "Contemporary Literature, Professional Communication",
+          "image": "",
+          "email": "sabrina.akhter@uset.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "economics",
+      "name": "Department of Economics",
+      "faculty": [
+        {
+          "id": "fahim-rahman",
+          "name": "Dr. Fahim Rahman",
+          "position": "Associate Professor & Chair",
+          "education": "Ph.D. in Economics, Jahangirnagar University",
+          "specialization": "Development Economics, Bangladesh Economy",
+          "image": "",
+          "email": "fahim.rahman@uset.ac.bd"
+        }
+      ]
+    }
+  ]
+}
