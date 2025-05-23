@@ -18,12 +18,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
   
   navLinks.forEach(link => {
-    const linkPath = link.getAttribute('href');
+    // Remove any existing active classes first
+    link.classList.remove('active');
     
-    // Check if current path matches the link or if it's a subpath
-    if (linkPath === '/' && currentLocation === '/') {
+    const linkPath = link.getAttribute('href');
+    // Handle both absolute and relative paths
+    const cleanLinkPath = linkPath.replace(/^\s*\//, ''); // Remove leading slash and spaces
+    const cleanCurrentPath = currentLocation.replace(/^\s*\//, '');
+    
+    if (cleanLinkPath === cleanCurrentPath || 
+        (cleanLinkPath !== 'index.html' && cleanCurrentPath.includes(cleanLinkPath))) {
       link.classList.add('active');
-    } else if (linkPath !== '/' && currentLocation.startsWith(linkPath)) {
+    }
+    // Special case for home page
+    if ((cleanCurrentPath === '' || cleanCurrentPath === 'index.html') && 
+        (cleanLinkPath === 'index.html' || cleanLinkPath === '/')) {
       link.classList.add('active');
     }
   });
