@@ -168,22 +168,27 @@
         <section class="py-5 bg-light">
             <div class="container">
                 <div class="text-center mb-5">
+                    <span class="badge badge-success px-3 py-2 mb-2">Excellence in Education</span>
                     <h2 class="h1 mb-4">Academic Systems & Standards</h2>
-                    <p class="lead mb-0">Our commitment to academic excellence and quality education</p>
+                    <p class="lead mb-0 mx-auto" style="max-width: 600px;">Our commitment to maintaining high academic standards and quality education</p>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-6 mb-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body p-4">
-                                <h3 class="h5 text-success mb-3">Grading System</h3>
-                                <p>USET follows a standard letter grading system to evaluate student performance:</p>
-                                <table class="table table-sm">
-                                    <thead class="bg-light">
+                        <div class="academic-card">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <i class="fas fa-chart-line"></i>
+                                    Grading System
+                                </h3>
+                                <p>We follow a comprehensive grading system that reflects student achievement:</p>
+                                <table class="grading-table">
+                                    <thead>
                                         <tr>
                                             <th>Grade</th>
                                             <th>Points</th>
                                             <th>Percentage</th>
+                                            <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -191,26 +196,19 @@
                                             <td>A+</td>
                                             <td>4.00</td>
                                             <td>90-100%</td>
+                                            <td>Excellent</td>
                                         </tr>
                                         <tr>
                                             <td>A</td>
                                             <td>3.75</td>
                                             <td>85-89%</td>
+                                            <td>Outstanding</td>
                                         </tr>
                                         <tr>
                                             <td>A-</td>
                                             <td>3.50</td>
                                             <td>80-84%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>B+</td>
-                                            <td>3.25</td>
-                                            <td>75-79%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>B</td>
-                                            <td>3.00</td>
-                                            <td>70-74%</td>
+                                            <td>Very Good</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -219,158 +217,73 @@
                     </div>
 
                     <div class="col-lg-6 mb-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body p-4">
-                                <h3 class="h5 text-success mb-3">Credit System</h3>
-                                <p>Our programs follow a credit hour system that measures academic workload:</p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item bg-transparent">
-                                        <strong>1 Credit Hour:</strong> 15 hours of classroom instruction per semester
-                                    </li>
-                                    <li class="list-group-item bg-transparent">
-                                        <strong>Laboratory/Practical:</strong> 30-45 hours of supervised laboratory work
-                                        equals 1 credit hour
-                                    </li>
-                                    <li class="list-group-item bg-transparent">
-                                        <strong>Internship/Fieldwork:</strong> 45 hours of supervised practical training
-                                        equals 1 credit hour
-                                    </li>
-                                    <li class="list-group-item bg-transparent">
-                                        <strong>Undergraduate Degree:</strong> Typically requires 120-144 credit hours
-                                    </li>
-                                    <li class="list-group-item bg-transparent">
-                                        <strong>Graduate Degree:</strong> Typically requires 30-36 credit hours
-                                    </li>
+                        <div class="academic-card">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Credit System
+                                </h3>
+                                <ul class="credit-list">
+                                    <li><strong>Lecture:</strong> 1 credit = 15 hours of classroom instruction</li>
+                                    <li><strong>Laboratory:</strong> 1 credit = 30-45 hours of practical work</li>
+                                    <li><strong>Internship:</strong> 1 credit = 45 hours of supervised training</li>
+                                    <li><strong>Project Work:</strong> 1 credit = 45 hours of guided project work</li>
+                                    <li><strong>Independent Study:</strong> 1 credit = 45 hours of research/study</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-6 mb-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body p-4">
-                                <h3 class="h5 text-success mb-3">Academic Calendar</h3>
-                                <p>The academic year at USET is divided into two main semesters with an optional summer
-                                    term:</p>
-                                <div class="accordion" id="calendarAccordion">
-                                    <div class="card mb-2 border">
-                                        <div class="card-header bg-white" id="fallHeading">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link btn-block text-left text-success"
-                                                    type="button" data-toggle="collapse" data-target="#fallCollapse"
-                                                    aria-expanded="true" aria-controls="fallCollapse">
-                                                    Fall Semester (September - December)
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="fallCollapse" class="collapse show" aria-labelledby="fallHeading"
-                                            data-parent="#calendarAccordion">
-                                            <div class="card-body">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li><strong>Registration:</strong> Late August</li>
-                                                    <li><strong>Classes Begin:</strong> First week of September</li>
-                                                    <li><strong>Midterm Exams:</strong> Late October</li>
-                                                    <li><strong>Final Exams:</strong> Mid-December</li>
-                                                    <li><strong>Semester Break:</strong> Late December - Early January
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card mb-2 border">
-                                        <div class="card-header bg-white" id="springHeading">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link btn-block text-left collapsed text-success"
-                                                    type="button" data-toggle="collapse" data-target="#springCollapse"
-                                                    aria-expanded="false" aria-controls="springCollapse">
-                                                    Spring Semester (January - May)
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="springCollapse" class="collapse" aria-labelledby="springHeading"
-                                            data-parent="#calendarAccordion">
-                                            <div class="card-body">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li><strong>Registration:</strong> Early January</li>
-                                                    <li><strong>Classes Begin:</strong> Mid-January</li>
-                                                    <li><strong>Midterm Exams:</strong> Early March</li>
-                                                    <li><strong>Final Exams:</strong> Early May</li>
-                                                    <li><strong>Semester Break:</strong> Mid-May - June</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card border">
-                                        <div class="card-header bg-white" id="summerHeading">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link btn-block text-left collapsed text-success"
-                                                    type="button" data-toggle="collapse" data-target="#summerCollapse"
-                                                    aria-expanded="false" aria-controls="summerCollapse">
-                                                    Summer Term (June - August)
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="summerCollapse" class="collapse" aria-labelledby="summerHeading"
-                                            data-parent="#calendarAccordion">
-                                            <div class="card-body">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li><strong>Registration:</strong> Late May</li>
-                                                    <li><strong>Classes Begin:</strong> First week of June</li>
-                                                    <li><strong>Final Exams:</strong> Early August</li>
-                                                    <li><strong>Break:</strong> Mid-August - Late August</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="academic-card">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Academic Calendar
+                                </h3>
+                                <div class="calendar-accordion" id="calendarAccordion">
+                                    <!-- Calendar content will be dynamically loaded -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-6 mb-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body p-4">
-                                <h3 class="h5 text-success mb-3">Academic Support Services</h3>
-                                <p>USET provides comprehensive support to help students succeed in their academic
-                                    journey:</p>
-                                <div class="d-flex mb-3">
-                                    <div class="mr-3 text-success">
-                                        <i class="fas fa-book-reader fa-lg"></i>
+                        <div class="academic-card">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <i class="fas fa-user-graduate"></i>
+                                    Academic Support Services
+                                </h3>
+                                <div class="support-grid">
+                                    <!-- Academic Advising -->
+                                    <div class="support-card">
+                                        <div class="support-icon-wrapper">
+                                            <i class="fas fa-compass"></i>
+                                        </div>
+                                        <h4 class="support-title">Academic Advising</h4>
+                                        <p class="support-description">Get personalized guidance for your academic journey. Course selection assistance, academic planning, and career pathway guidance from experienced advisors.</p>
+                                        <a href="#" class="support-link">Schedule now <i class="fas fa-arrow-right"></i></a>
                                     </div>
-                                    <div>
-                                        <h4 class="h6 font-weight-bold">Academic Advising</h4>
-                                        <p class="mb-0 text-muted">Personalized guidance for course selection and
-                                            academic planning</p>
+
+                                    <!-- Tutoring Services -->
+                                    <div class="support-card">
+                                        <div class="support-icon-wrapper">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                        </div>
+                                        <h4 class="support-title">Tutoring Services</h4>
+                                        <p class="support-description">Access free one-on-one tutoring, group sessions, and online tutoring support from qualified tutors to improve your performance.</p>
+                                        <a href="#" class="support-link">Find a tutor <i class="fas fa-arrow-right"></i></a>
                                     </div>
-                                </div>
-                                <div class="d-flex mb-3">
-                                    <div class="mr-3 text-success">
-                                        <i class="fas fa-chalkboard-teacher fa-lg"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="h6 font-weight-bold">Tutoring Services</h4>
-                                        <p class="mb-0 text-muted">Free peer and faculty tutoring for challenging
-                                            courses</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-3">
-                                    <div class="mr-3 text-success">
-                                        <i class="fas fa-laptop-code fa-lg"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="h6 font-weight-bold">Learning Resources</h4>
-                                        <p class="mb-0 text-muted">Digital library, research databases, and computer
-                                            laboratories</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="mr-3 text-success">
-                                        <i class="fas fa-user-graduate fa-lg"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="h6 font-weight-bold">Career Development</h4>
-                                        <p class="mb-0 text-muted">Career counseling, resume workshops, and interview
-                                            preparation</p>
+
+                                    <!-- Learning Resources -->
+                                    <div class="support-card">
+                                        <div class="support-icon-wrapper">
+                                            <i class="fas fa-laptop-code"></i>
+                                        </div>
+                                        <h4 class="support-title">Learning Resources</h4>
+                                        <p class="support-description">Access our comprehensive digital library, online learning platforms, and research databases to support your academic success.</p>
+                                        <a href="#" class="support-link">Explore more <i class="fas fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -501,6 +414,7 @@
     <!-- Custom JS -->
     <script src="../js/main.js"></script>
     <script src="../js/header.js"></script>
+    <script src="../js/academic-calendar.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Load faculties and programs
@@ -591,6 +505,9 @@
                         </div>
                     `;
                 });
+            
+            // Load Academic Calendar
+            loadAcademicCalendar();
         });
 
         // Helper functions remain the same
