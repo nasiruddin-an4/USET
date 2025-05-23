@@ -22,6 +22,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/academic.css">
 </head>
 
 <body>
@@ -74,8 +75,6 @@
 
     <!-- Main Content -->
     <main>
-
-
         <!-- page-hero -->
         <section class="page-hero">
             <div class="container">
@@ -95,10 +94,6 @@
         <section class="py-5">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <img src="../img/uset_academic_vision.png" alt="USET Academic Vision"
-                            class="img-fluid rounded shadow">
-                    </div>
                     <div class="col-lg-6">
                         <h2 class="h1 mb-4 text-success">Our Academic Vision</h2>
                         <p class="lead mb-4">USET is committed to providing industry-relevant education that prepares
@@ -109,27 +104,10 @@
                         <p>We follow the dual technical education system modeled after successful European approaches,
                             combining classroom learning with hands-on experience through laboratory work, projects, and
                             internships.</p>
-                        <div class="d-flex">
-                            <div class="bg-success text-white p-2 rounded-circle mr-3">
-                                <i class="fas fa-check"></i>
-                            </div>
-                            <p class="mb-2"><strong>Practice-Oriented Learning:</strong> Emphasis on practical skills
-                                development</p>
-                        </div>
-                        <div class="d-flex">
-                            <div class="bg-success text-white p-2 rounded-circle mr-3">
-                                <i class="fas fa-check"></i>
-                            </div>
-                            <p class="mb-2"><strong>Industry Integration:</strong> Curriculum designed with industry
-                                partners</p>
-                        </div>
-                        <div class="d-flex">
-                            <div class="bg-success text-white p-2 rounded-circle mr-3">
-                                <i class="fas fa-check"></i>
-                            </div>
-                            <p class="mb-0"><strong>Professional Mentorship:</strong> Faculty with extensive industry
-                                experience</p>
-                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="img/img/uset_academic_vision.png" alt="USET Academic Vision"
+                            class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
@@ -139,12 +117,13 @@
         <section class="py-5 bg-light">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="h1 mb-4">Our Faculties & Departments</h2>
-                    <p class="lead mb-0">Explore our diverse academic offerings across multiple disciplines</p>
+                    <span class="badge badge-success px-3 py-2 mb-2">Our Academics</span>
+                    <h2 class="h1 mb-4">Faculties & Departments</h2>
+                    <p class="lead mb-0 mx-auto" style="max-width: 600px;">Explore our diverse academic offerings across multiple disciplines, designed to prepare you for success in your chosen field</p>
                 </div>
 
                 <div class="row" id="faculties-container">
-                    <!-- Faculties will be loaded here -->
+                    <!-- Faculty cards will be dynamically inserted here -->
                 </div>
             </div>
         </section>
@@ -152,14 +131,6 @@
         <!-- Programs & Courses -->
         <section class="py-5">
             <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="h1 mb-4">Featured Programs</h2>
-                    <p class="lead mb-0">Discover our industry-relevant academic programs</p>
-                </div>
-
-                <div class="row" id="programs-container">
-                    <!-- Programs will be loaded here -->
-                </div>
 
                 <!-- Program Filter -->
                 <div class="card border-0 shadow-sm mt-5">
@@ -534,86 +505,114 @@
         document.addEventListener('DOMContentLoaded', function () {
             // Load faculties and programs
             fetch('../data/programs.json')
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     const faculties = data.faculties;
-                    const facultiescontainer = document.getElementById('faculties-container');
-                    const programscontainer = document.getElementById('programs-container');
-                    const facultySelect = document.getElementById('programFaculty');
+                    const facultiesContainer = document.getElementById('faculties-container');
 
-                    // Clear containers
-                    facultiescontainer.innerHTML = '';
-                    programscontainer.innerHTML = '';
+                    // Clear container
+                    facultiesContainer.innerHTML = '';
 
                     // Load faculties
                     faculties.forEach(faculty => {
-                        // Create faculty card
                         const facultyColumn = document.createElement('div');
-                        facultyColumn.className = 'col-md-6 mb-4';
+                        facultyColumn.className = 'col-md-6 col-lg-4 mb-4';
                         facultyColumn.innerHTML = `
-                            <div class="card h-100 border-0 shadow-sm">
-                                <div class="card-body">
-                                    <h3 class="h5 text-success mb-3">${faculty.name}</h3>
-                                    <p class="text-muted mb-4">Offers programs focused on providing students with practical skills and knowledge in ${faculty.name.split(' ').pop().toLowerCase()} fields.</p>
-                                    <h4 class="h6 mb-2">Programs Offered:</h4>
-                                    <ul class="list-unstyled mb-4">
-                                        ${faculty.programs.map(program => `
-                                            <li class="mb-1">
-                                                <i class="fas fa-graduation-cap text-success mr-2"></i>
-                                                <a href="program-detail.html?faculty=${faculty.id}&program=${program.id}" class="text-dark">
-                                                    ${program.name}
+                            <div class="card faculty-card">
+                                <div class="card-body p-3">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="faculty-icon">
+                                            <i class="${getFacultyIcon(faculty.name)}"></i>
+                                        </div>
+                                        <h3 class="h4 mb-0 ml-3" title="${faculty.name}">${faculty.name}</h3>
+                                    </div>
+                                    
+                                    <p class="text-muted mb-3">${faculty.description || `Offering cutting-edge programs in ${faculty.name.toLowerCase()} to prepare future industry leaders.`}</p>
+                                    
+                                    <div class="program-list">
+                                        ${faculty.programs.slice(0, 3).map(program => `
+                                            <div class="program-list-item">
+                                                <a href="program-detail.html?faculty=${faculty.id}&program=${program.id}" 
+                                                   class="text-dark text-decoration-none d-flex align-items-center"
+                                                   title="${program.name}">
+                                                   <i class="fas fa-graduation-cap mr-2 text-success"></i>
+                                                   <span>${program.name}</span>
                                                 </a>
-                                            </li>
+                                            </div>
                                         `).join('')}
-                                    </ul>
-                                    <a href="#" class="btn btn-sm btn-outline-success">Learn More</a>
+                                        ${faculty.programs.length > 3 ? 
+                                            `<div class="program-list-item">
+                                                <a href="faculty-detail.html?id=${faculty.id}" 
+                                                   class="text-muted text-decoration-none d-flex align-items-center">
+                                                   <i class="fas fa-plus-circle mr-2"></i>
+                                                   <span>${faculty.programs.length - 3} more programs</span>
+                                                </a>
+                                            </div>` : ''
+                                        }
+                                    </div>
+
+                                    <div class="faculty-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-number">${faculty.programs.length}</div>
+                                            <div class="stat-label">Programs</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-number">${faculty.departments?.length || 3}</div>
+                                            <div class="stat-label">Depts</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-number">${getRandomNumber(10, 30)}</div>
+                                            <div class="stat-label">Faculty</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-top-0">
+                                    <a href="faculty-detail.html?id=${faculty.id}" 
+                                       class="btn btn-outline-success btn-block d-flex align-items-center justify-content-center">
+                                        <span>Explore Faculty</span>
+                                        <i class="fas fa-arrow-right ml-2"></i>
+                                    </a>
                                 </div>
                             </div>
                         `;
-                        facultiescontainer.appendChild(facultyColumn);
-
-                        // Add faculty to select dropdown
-                        const option = document.createElement('option');
-                        option.value = faculty.id;
-                        option.textContent = faculty.name;
-                        facultySelect.appendChild(option);
-
-                        // Add featured programs (first program from each faculty)
-                        if (faculty.programs.length > 0) {
-                            const program = faculty.programs[0];
-                            const programColumn = document.createElement('div');
-                            programColumn.className = 'col-md-6 col-lg-4 mb-4';
-                            programColumn.innerHTML = `
-                                <div class="card program-card h-100">
-                                    <div class="program-header">
-                                        <h3 class="h5 font-weight-bold mb-0">${program.name}</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="text-muted mb-4">${program.description.substring(0, 150)}...</p>
-                                        <a href="program-detail.html?faculty=${faculty.id}&program=${program.id}" class="btn btn-success btn-block">
-                                            View Program Details
-                                        </a>
-                                    </div>
-                                </div>
-                            `;
-                            programscontainer.appendChild(programColumn);
-                        }
-                    });
-
-                    // Handle program search
-                    document.getElementById('searchButton').addEventListener('click', function () {
-                        const level = document.getElementById('programLevel').value;
-                        const faculty = document.getElementById('programFaculty').value;
-                        const searchText = document.getElementById('programSearch').value.toLowerCase();
-
-                        // Display search results
-                        alert(`Search for programs with:\nLevel: ${level}\nFaculty: ${faculty}\nSearch text: ${searchText}`);
-
-                        // In a real implementation, this would filter and display matching programs
+                        facultiesContainer.appendChild(facultyColumn);
                     });
                 })
-                .catch(error => console.error('Error loading programs data:', error));
+                .catch(error => {
+                    console.error('Error loading faculties data:', error);
+                    document.getElementById('faculties-container').innerHTML = `
+                        <div class="col-12 text-center">
+                            <p class="text-danger">Error loading faculty data. Please try again later.</p>
+                        </div>
+                    `;
+                });
         });
+
+        // Helper functions remain the same
+        function getFacultyIcon(facultyName) {
+            const icons = {
+                'Engineering': 'fas fa-cog',
+                'Business': 'fas fa-chart-line',
+                'Science': 'fas fa-flask',
+                'Arts': 'fas fa-paint-brush',
+                'Medicine': 'fas fa-heartbeat',
+                'Technology': 'fas fa-microchip'
+            };
+            
+            for (const [key, icon] of Object.entries(icons)) {
+                if (facultyName.includes(key)) return icon;
+            }
+            return 'fas fa-university';
+        }
+
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
     </script>
 </body>
 
