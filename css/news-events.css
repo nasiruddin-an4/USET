@@ -1,0 +1,11 @@
+/* Page Header Styles */
+.page-header {
+    background: linear-gradient(rgba(40, 167, 69, 0.9), rgba(40, 167, 69, 0.8)), url('../img/news-events-header.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0 80px;
+    margin-top: 76px;
+    position: relative;
+}
+
+/* Add your news and events specific styles here */
