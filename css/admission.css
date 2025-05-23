@@ -443,23 +443,535 @@
     line-height: 1.6;
 }
 
-/* Responsive adjustments */
+/* Programs Section Styles */
+    .programs-section {
+        padding: 4rem 0;
+        background: linear-gradient(135deg, rgba(40, 167, 69, 0.03) 0%, rgba(40, 167, 69, 0.08) 100%);
+    }
+
+    .section-badge {
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    .program-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(40, 167, 69, 0.1);
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .program-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(40, 167, 69, 0.15);
+        border-color: #28a745;
+    }
+
+    .program-header {
+        background: linear-gradient(45deg, #28a745, #218838);
+    }
+
+    .program-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .program-body {
+        font-size: 0.9rem;
+    }
+
+    .faculty {
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    .program-stats {
+        gap: 0.5rem;
+    }
+
+    .stat-item {
+        background: rgba(40, 167, 69, 0.05);
+        padding: 0.3rem; /* Reduced padding */
+        border-radius: 4px;
+        flex: 1;
+    }
+
+    .stat-label {
+        font-size: 0.65rem; /* Smaller font size */
+        line-height: 1.2;
+    }
+
+    .stat-value {
+        font-size: 0.8rem; /* Smaller font size */
+        line-height: 1.2;
+    }
+
+    .program-description {
+        line-height: 1.5;
+        font-size: 0.85rem;
+    }
+
+    .program-requirements {
+        border: 1px solid rgba(40, 167, 69, 0.1);
+    }
+
+    .program-requirements h4 {
+        font-size: 0.9rem;
+    }
+
+    .program-actions {
+        gap: 0.5rem;
+    }
+
+    .program-actions .btn-sm {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: 767px) {
+        .programs-section {
+            padding: 2.5rem 0;
+        }
+
+        .program-title {
+            font-size: 1.1rem;
+        }
+
+        .program-body {
+            font-size: 0.85rem;
+        }
+
+        .program-actions {
+            flex-direction: column;
+        }
+
+        .program-actions .btn {
+            width: 100%;
+        }
+
+        .display-4 {
+            font-size: 2rem;
+        }
+
+        .stat-label {
+            font-size: 0.6rem; /* Even smaller on mobile */
+        }
+
+        .stat-value {
+            font-size: 0.75rem; /* Even smaller on mobile */
+        }
+    }
+
+/* Tuition & Scholarships Section Styles */
+.tuition-scholarships {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.05) 0%, rgba(40, 167, 69, 0.1) 100%);
+}
+
+.fee-card, .scholarship-card {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.fee-card:hover, .scholarship-card:hover {
+    transform: translateY(-5px);
+}
+
+.fee-table {
+    font-size: 0.95rem;
+}
+
+.fee-row {
+    padding: 0.5rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.fee-row:hover {
+    background: rgba(40, 167, 69, 0.05);
+    border-radius: 4px;
+}
+
+.estimated-cost {
+    border-left: 4px solid #28a745;
+}
+
+.scholarship-type {
+    margin-bottom: 2rem;
+}
+
+.scholarship-row {
+    padding: 0.75rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.scholarship-row:hover {
+    background: rgba(40, 167, 69, 0.05);
+}
+
+.scholarship-item {
+    transition: all 0.3s ease;
+}
+
+.scholarship-item:hover {
+    transform: translateX(5px);
+    border-left: 3px solid #28a745;
+}
+
+.badge {
+    padding: 0.5em 1em;
+    font-weight: 500;
+}
+
+.icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.bg-success-light {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
 @media (max-width: 768px) {
-    .why-uset {
-        padding: 3rem 0;
+    .fee-card, .scholarship-card {
+        margin-bottom: 1.5rem;
     }
     
-    .feature-card {
+    .scholarship-row {
+        padding: 0.5rem;
+    }
+}
+
+/* Contact Section Styles */
+.contact-admission {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2.5rem;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+    border-radius: 15px;
+    border: 1px solid rgba(40, 167, 69, 0.1);
+    box-shadow: 0 10px 30px -15px rgba(40, 167, 69, 0.15);
+}
+
+.contact-admission p {
+    color: #495057;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.contact-btn i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .contact-admission {
         padding: 2rem 1.5rem;
-        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    .contact-admission p {
+        font-size: 1rem;
+    }
+
+    .contact-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.875rem 1.5rem;
+    }
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.03) 0%, rgba(40, 167, 69, 0.08) 100%);
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: none;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none !important;
+    box-shadow: none !important;
+    position: relative;
+    padding-right: 3rem;
+}
+
+.accordion-button::after {
+    content: '';
+    position: absolute;
+    right: 1.5rem;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #28a745;
+    border-bottom: 2px solid #28a745;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    top: calc(50% - 6px);
+}
+
+.accordion-button[aria-expanded="true"]::after {
+    transform: rotate(-135deg);
+    top: calc(50% - 4px);
+}
+
+.accordion-button:hover::after {
+    border-color: #218838;
+}
+
+/* Remove the icon-box styles since we're not using them anymore */
+.accordion-button .icon-box {
+    display: none;
+}
+
+.accordion-button span {
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.accordion-button[aria-expanded="true"] {
+    background: #f8f9fa;
+    color: #28a745;
+}
+
+.accordion-button[aria-expanded="true"] span {
+    color: #28a745;
+}
+
+/* Add smooth transition for text color change */
+.accordion-button span {
+    transition: color 0.3s ease;
+}
+
+.accordion-button:hover span {
+    color: #28a745;
+}
+
+@media (max-width: 768px) {
+    .accordion-button {
+        padding: 0.875rem 1.25rem;
     }
     
-    .feature-icon {
-        width: 60px;
-        height: 60px;
+    .accordion-button::after {
+        width: 8px;
+        height: 8px;
+        right: 1.25rem;
+    }
+}
+
+.custom-accordion .accordion-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(40, 167, 69, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.custom-accordion .accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-button .icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(40, 167, 69, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.25rem;
+    transform: translateZ(0);
+    transition: all 0.3s ease;
+}
+
+.accordion-button .icon-box i {
+    color: #28a745;
+    font-size: 1.1rem;
+}
+
+.accordion-button span {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.accordion-button[aria-expanded="true"] {
+    background: #f8f9fa;
+}
+
+.accordion-button[aria-expanded="true"] .icon-box {
+    background: #28a745;
+    transform: scale(1.1);
+}
+
+.accordion-collapse {
+    transition: all 0.35s ease-in-out;
+}
+
+/* Hover effects */
+.accordion-button:hover .icon-box {
+    transform: scale(1.1);
+}
+
+.accordion-button:hover::after {
+    border-color: #28a745;
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    background: #f8f9fa;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.custom-list li::before {
+    content: '•';
+    color: #28a745;
+    position: absolute;
+    left: 0;
+}
+
+.test-components {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.component-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.requirement-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.requirement-item i {
+    font-size: 2rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.housing-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.option-card {
+    padding: 1.25rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.transfer-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.info-item h6 {
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .accordion-button span {
+        font-size: 1rem;
     }
     
-    .feature-icon i {
-        font-size: 1.5rem;
+    .requirements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .housing-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .transfer-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
