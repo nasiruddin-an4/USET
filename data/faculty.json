@@ -10,7 +10,7 @@
           "position": "Associate Professor & Chair",
           "education": "Ph.D. in Computer Science, University of Dhaka",
           "specialization": "Artificial Intelligence, Machine Learning",
-          "image": "/images/jamim_hossain_chowdhury_profile.png",
+          "image": "img/f2.jpg",
           "email": "jamim.chowdhury@uset.ac.bd"
         },
         {
@@ -19,7 +19,7 @@
           "position": "Assistant Professor",
           "education": "M.Sc. in Computer Science & Engineering, BUET",
           "specialization": "Databases, Web Technologies",
-          "image": "/images/farhana_akter_badhon_profile.png",
+          "image": "img/f1.jpg",
           "email": "farhana.badhon@uset.ac.bd"
         },
         {
@@ -28,7 +28,7 @@
           "position": "Lecturer",
           "education": "M.Sc. in Computer Science, Jahangirnagar University",
           "specialization": "Computer Networks, Cybersecurity",
-          "image": "/images/moumita_kabir_profile.png",
+          "image": "img/f3.jpg",
           "email": "moumita.kabir@uset.ac.bd"
         }
       ]

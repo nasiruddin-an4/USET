@@ -20,6 +20,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/faculty.css">
 </head>
 <body>
     <!-- Header/Navigation -->
@@ -308,18 +309,26 @@
                 const column = document.createElement('div');
                 column.className = 'col-md-6 col-lg-4 mb-4';
                 
-                // Use default image if none provided
                 const imgSrc = faculty.image ? faculty.image : '../img/uset_homepage_full.png';
                 
                 column.innerHTML = `
                     <div class="card faculty-card h-100">
-                        <img src="${imgSrc}" class="card-img-top faculty-img" alt="${faculty.name}">
-                        <div class="card-body">
-                            <h4 class="h5 card-title font-weight-bold">${faculty.name}</h4>
+                        <div class="position-relative">
+                            <img src="${imgSrc}" class="card-img-top faculty-img" alt="${faculty.name}">
+                            <div class="faculty-overlay"></div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="h5 card-title">${faculty.name}</h4>
                             <p class="text-success mb-2">${faculty.position}</p>
-                            <p class="card-text small mb-3">${faculty.specialization}</p>
-                            <p class="card-text small text-muted mb-3">${faculty.education}</p>
-                            <a href="mailto:${faculty.email}" class="btn btn-sm btn-outline-success"><i class="fas fa-envelope mr-2"></i>Contact</a>
+                            <div class="faculty-info mb-3">
+                                <p class="card-text small mb-2">${faculty.specialization}</p>
+                                <p class="card-text small text-muted">${faculty.education}</p>
+                            </div>
+                            <div class="faculty-contact">
+                                <a href="mailto:${faculty.email}" class="btn btn-sm btn-outline-success rounded-pill">
+                                    <i class="fas fa-envelope mr-2"></i>Contact
+                                </a>
+                            </div>
                         </div>
                     </div>
                 `;
