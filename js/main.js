@@ -99,6 +99,11 @@ document.addEventListener('DOMContentLoaded', function() {
   if (statsSection) {
     observer.observe(statsSection);
   }
+
+  var testimonialCarousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
+    interval: 5000,
+    wrap: true
+  });
 });
 
 $(document).ready(function(){
