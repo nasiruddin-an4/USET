@@ -1,11 +1,342 @@
-/* Page Header Styles */
-.page-header {
-    background: linear-gradient(rgba(40, 167, 69, 0.9), rgba(40, 167, 69, 0.8)), url('../img/news-events-header.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 160px 0 80px;
-    margin-top: 76px;
+ /* Enhanced Hero Section */
+ :root {
+    --primary-green: #28a745;
+    --secondary-green: #48c774;
+    --dark-green: #1a3c34;
+    --light-green: #e6f4ea;
+    --gradient-1: linear-gradient(135deg, #28a745, #48c774);
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.carousel-item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel-item:not(.active) {
+    display: none;
+}
+
+.newsletter-form .form-control {
+    transition: all 0.3s ease;
+}
+
+.newsletter-form .form-control:focus {
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.3);
+    border-color: var(--primary-green);
+}
+
+.stats-item:hover .stats-number {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.calendar-item:hover {
+    background: var(--light-green);
+    transform: translateX(8px);
+    transition: all 0.3s ease;
+}
+
+.gallery-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-title {
+    font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.card-body {
+    padding: 2.5rem;
+}
+
+/* Featured News Card */
+.featured-news {
+    background: linear-gradient(135deg, white 0%, #f8f9fa 100%);
+    border-left: 6px solid var(--primary-green);
     position: relative;
 }
 
-/* Add your news and events specific styles here */
+.featured-news::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: var(--gradient-1);
+    opacity: 0.05;
+    border-radius: 50%;
+    transform: translate(30px, -30px);
+}
+
+/* News Grid Cards */
+.news-card {
+    height: 100%;
+    position: relative;
+    background: white;
+}
+
+.news-card .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.news-card .card-text {
+    flex-grow: 1;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.news-date {
+    background: var(--light-green);
+    color: var(--dark-green);
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Icon styling */
+.news-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--gradient-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 2rem;
+}
+/* Calendar Section */
+.calendar-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-left: 5px solid var(--secondary-green);
+    position: relative;
+}
+
+.calendar-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-1);
+    opacity: 0.1;
+    border-radius: 50%;
+}
+
+.calendar-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.calendar-item:last-child {
+    border-bottom: none;
+}
+
+.calendar-item:hover {
+    background: var(--light-green);
+    padding-left: 1.5rem;
+    transform: translateX(5px);
+}
+
+.calendar-date {
+    font-weight: 700;
+    color: var(--primary-green);
+    min-width: 120px;
+    display: inline-block;
+}
+
+/* Gallery */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    transition: all 0.4s ease;
+    height: 250px;
+    background: var(--gradient-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03) rotate(1deg);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background: var(--gradient-1);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.newsletter-section .form-control {
+    border: none;
+    border-radius: 25px;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+}
+
+.newsletter-section .btn {
+    border-radius: 25px;
+    background: white;
+    color: var(--primary-green);
+    font-weight: 700;
+    padding: 1rem 2rem;
+}
+
+/* Section Headings */
+.section-heading {
+    position: relative;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-1);
+    border-radius: 2px;
+}
+
+/* Highlight Badges */
+.highlight-badge {
+    background: var(--gradient-1);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Animations */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stats */
+.stats-item {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.stats-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    line-height: 1;
+}
+
+.stats-label {
+    color: #6c757d;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .card-body {
+        padding: 2rem;
+    }
+    
+    .newsletter-section {
+        padding: 2rem;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+}
