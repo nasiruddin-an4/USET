@@ -28,7 +28,7 @@
           "position": "Lecturer",
           "education": "M.Sc. in Computer Science, Jahangirnagar University",
           "specialization": "Computer Networks, Cybersecurity",
-          "image": "img/f3.jpg",
+          "image": "img/f1.jpg",
           "email": "moumita.kabir@uset.ac.bd"
         }
       ]
@@ -43,7 +43,7 @@
           "position": "Associate Professor & Chair",
           "education": "Ph.D. in Business Administration, University of Dhaka",
           "specialization": "Strategic Management, Entrepreneurship",
-          "image": "/images/md_arifur_rahman_profile.png",
+          "image": "img/f3.jpg",
           "email": "arifur.rahman@uset.ac.bd"
         },
         {
@@ -52,7 +52,7 @@
           "position": "Assistant Professor",
           "education": "MBA, Institute of Business Administration, University of Dhaka",
           "specialization": "Marketing, Consumer Behavior",
-          "image": "/images/shamim_ahmed_profile.png",
+          "image": "img/f2.jpg",
           "email": "shamim.ahmed@uset.ac.bd"
         }
       ]
@@ -67,7 +67,7 @@
           "position": "Associate Professor & Chair",
           "education": "Ph.D. in English Literature, University of Dhaka",
           "specialization": "Contemporary Literature, Professional Communication",
-          "image": "",
+          "image": "img/f1.jpg",
           "email": "sabrina.akhter@uset.ac.bd"
         }
       ]
@@ -82,7 +82,7 @@
           "position": "Associate Professor & Chair",
           "education": "Ph.D. in Economics, Jahangirnagar University",
           "specialization": "Development Economics, Bangladesh Economy",
-          "image": "",
+          "image": "img/f1.jpg",
           "email": "fahim.rahman@uset.ac.bd"
         }
       ]
