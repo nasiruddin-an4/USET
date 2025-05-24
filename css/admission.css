@@ -995,7 +995,6 @@
 
 .request-form .form-control {
     border: 1px solid rgba(40, 167, 69, 0.2);
-    padding: 0.75rem 1rem;
     font-size: 0.95rem;
     transition: all 0.3s ease;
 }
