@@ -187,6 +187,13 @@
     transition: all 0.3s ease;
     animation: slideUp 0.6s ease forwards;
     padding: 1.2rem;
+    overflow: hidden;
+    height: 350px;
+}
+.club-card img{
+    height: 310px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .club-card:hover {

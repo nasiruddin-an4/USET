@@ -170,6 +170,7 @@
     font-weight: 600;
     width: 100%;
     transition: var(--transition);
+    margin-bottom: 15px;
 }
 
 .apply-btn:hover {

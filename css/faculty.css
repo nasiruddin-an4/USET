@@ -392,3 +392,9 @@
         font-size: 1.1rem;
     }
 }
+
+.cta-image img{
+    height: 290px;
+    object-fit: cover;
+    border-radius: 15px;
+}
