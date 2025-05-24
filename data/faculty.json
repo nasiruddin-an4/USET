@@ -5,31 +5,34 @@
       "name": "Department of Computer Science and Engineering",
       "faculty": [
         {
-          "id": "jamim-chowdhury",
-          "name": "Dr. Jamim Hossain Chowdhury",
-          "position": "Associate Professor & Chair",
-          "education": "Ph.D. in Computer Science, University of Dhaka",
-          "specialization": "Artificial Intelligence, Machine Learning",
-          "image": "img/f2.jpg",
-          "email": "jamim.chowdhury@uset.ac.bd"
-        },
-        {
-          "id": "farhana-badhon",
           "name": "Farhana Akter Badhon",
-          "position": "Assistant Professor",
-          "education": "M.Sc. in Computer Science & Engineering, BUET",
-          "specialization": "Databases, Web Technologies",
-          "image": "img/f1.jpg",
-          "email": "farhana.badhon@uset.ac.bd"
+          "position": "Lecturer",
+          "image": "img/Farhana Akter Badhon.jpg"
         },
         {
-          "id": "moumita-kabir",
-          "name": "Moumita Kabir",
+          "name": "Jamim Hossain Chowdhury",
           "position": "Lecturer",
-          "education": "M.Sc. in Computer Science, Jahangirnagar University",
-          "specialization": "Computer Networks, Cybersecurity",
-          "image": "img/f1.jpg",
-          "email": "moumita.kabir@uset.ac.bd"
+          "image": "img/Jamim Hossain Chowdhury.jpg"
+        },
+        {
+          "name": "Md. Arifur Rahman",
+          "position": "Lecturer",
+          "image": "img/Md. Arifur Rahman.jpg"
+        },
+        {
+          "name": "Moumita Kabir",
+          "position": "Lecturer (on study leave)",
+          "image": "img/Moumita Kabir.jpg"
+        },
+        {
+          "name": "Shamim Ahmed",
+          "position": "Lecturer",
+          "image": "img/shamim ahmed.avif"
+        },
+        {
+          "name": "Zannatul Ferdous Zannat",
+          "position": "Lecturer",
+          "image": "img/Zannatul Ferdous Zannat.jpg"
         }
       ]
     },
@@ -38,22 +41,24 @@
       "name": "Department of Business Administration",
       "faculty": [
         {
-          "id": "arifur-rahman",
-          "name": "Dr. Md. Arifur Rahman",
-          "position": "Associate Professor & Chair",
-          "education": "Ph.D. in Business Administration, University of Dhaka",
-          "specialization": "Strategic Management, Entrepreneurship",
-          "image": "img/f3.jpg",
-          "email": "arifur.rahman@uset.ac.bd"
+          "name": "Md Abdur Rashid",
+          "position": "Associate Professor, Department Head",
+          "image": "img/Md Abdur Rashid.jpg"
         },
         {
-          "id": "shamim-ahmed",
-          "name": "Shamim Ahmed",
-          "position": "Assistant Professor",
-          "education": "MBA, Institute of Business Administration, University of Dhaka",
-          "specialization": "Marketing, Consumer Behavior",
-          "image": "img/f2.jpg",
-          "email": "shamim.ahmed@uset.ac.bd"
+          "name": "Md. Hafizul Islam",
+          "position": "Lecturer",
+          "image": "img/Md. Hafizul Islam.jpg"
+        },
+        {
+          "name": "Abdullah Bin Seraj",
+          "position": "Lecturer",
+          "image": "img/Abdullah Bin Seraj.jpg"
+        },
+        {
+          "name": "Sadia Ahmed Urmi",
+          "position": "Lecturer",
+          "image": "img/Sadia Ahmed Urmi.jpg"
         }
       ]
     },
@@ -62,13 +67,19 @@
       "name": "Department of English",
       "faculty": [
         {
-          "id": "sabrina-akhter",
-          "name": "Dr. Sabrina Akhter",
-          "position": "Associate Professor & Chair",
-          "education": "Ph.D. in English Literature, University of Dhaka",
-          "specialization": "Contemporary Literature, Professional Communication",
-          "image": "img/f1.jpg",
-          "email": "sabrina.akhter@uset.ac.bd"
+          "name": "Imrose Afrine",
+          "position": "Lecturer",
+          "image": "img/Imrose Afrine.jpg"
+        },
+        {
+          "name": "Md. Mahbub Alam Khan",
+          "position": "Lecturer",
+          "image": "img/Md. Mahbub Alam Khan.jpg"
+        },
+        {
+          "name": "Zinat Alfaz Pinky",
+          "position": "Lecturer",
+          "image": "img/Zinat Alfaz Pinky.jpg"
         }
       ]
     },
@@ -77,13 +88,9 @@
       "name": "Department of Economics",
       "faculty": [
         {
-          "id": "fahim-rahman",
-          "name": "Dr. Fahim Rahman",
-          "position": "Associate Professor & Chair",
-          "education": "Ph.D. in Economics, Jahangirnagar University",
-          "specialization": "Development Economics, Bangladesh Economy",
-          "image": "img/f1.jpg",
-          "email": "fahim.rahman@uset.ac.bd"
+          "name": "Nawazeesh Muhammad Ali",
+          "position": "Lecturer",
+          "image": "img/Nawazeesh Muhammad Ali.jpg"
         }
       ]
     }
