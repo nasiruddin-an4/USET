@@ -568,8 +568,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
     font-weight: 500;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -588,6 +588,7 @@
 .direction-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(40, 167, 69, 0.15);
+    text-decoration: none;
 }
 
 .btn-primary:hover {
