@@ -31,7 +31,7 @@
           "description": "Our CSE program prepares students with both theoretical foundations and practical skills in software development, computer systems, and emerging technologies like AI and data science.",
           "career_paths": ["Software Engineer", "Web Developer", "Systems Analyst", "Database Administrator", "AI/ML Engineer"],
           "key_courses": ["Data Structures & Algorithms", "Database Systems", "Web Engineering", "Artificial Intelligence", "Computer Networks", "Software Engineering"],
-          "admission_requirements": "HSC/A-Level with minimum GPA 3.5 in Science or equivalent",
+          "admission_requirements": "HSC/A-Level with minimum GPA 3.5 in Science or equivalent others",
           "practical_components": ["Programming labs", "Software development projects", "Hardware design workshops", "Industry internships"]
         }
       ]
@@ -49,7 +49,7 @@
           "description": "Our English program provides comprehensive education in English literature, language, and communication skills with practical applications in professional settings.",
           "career_paths": ["Content Writer", "Teacher", "Editor", "Communications Specialist", "Public Relations Officer"],
           "key_courses": ["English Literature", "Professional Communication", "Content Development", "Linguistics", "Creative Writing", "Technical Writing"],
-          "admission_requirements": "HSC/A-Level with minimum GPA 3.0 or equivalent",
+          "admission_requirements": "HSC/A-Level with minimum GPA 3.0 or equivalent with others",
           "practical_components": ["Writing workshops", "Publication projects", "Communication labs", "Professional content development"]
         },
         {

@@ -279,16 +279,9 @@
                                 <ul class="list-unstyled">
                                     <li class="d-flex mb-3">
                                         <i class="fas fa-check-circle text-success mr-3 mt-1"></i>
-                                        <div>
-                                            <strong>Educational Qualification:</strong>
-                                            <p class="mb-0">HSC/A-Level or equivalent with required grades in relevant subjects</p>
-                                        </div>
-                                    </li>
-                                    <li class="d-flex mb-3">
-                                        <i class="fas fa-check-circle text-success mr-3 mt-1"></i>
-                                        <div>
-                                            <strong>Admission Test:</strong>
-                                            <p class="mb-0">Written test followed by an interview</p>
+                                        <div id="admission-requirements">
+                                            <strong>Requirements:</strong>
+                                            <p class="mb-0">Loading admission requirements...</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -499,6 +492,12 @@
                     document.getElementById('program-duration').textContent = program.duration || '4 Years';
                     document.getElementById('total-credits').textContent = program.credits || '144 Credits';
                     
+                    // Update admission requirements
+                    document.getElementById('admission-requirements').innerHTML = `
+                        <strong>Requirements:</strong>
+                        <p class="mb-0">${program.admission_requirements}</p>
+                    `;
+
                     // Create program objectives
                     const objectivescontainer = document.getElementById('program-objectives');
                     objectivescontainer.innerHTML = '';
