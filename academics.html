@@ -106,8 +106,7 @@
                             internships.</p>
                     </div>
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <img src="img/10003.jpg" alt="USET Academic Vision"
-                            class="img-fluid rounded shadow">
+                        <img src="img/10003.jpg" alt="USET Academic Vision" class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
@@ -119,7 +118,8 @@
                 <div class="text-center mb-5">
                     <span class="badge badge-success px-3 py-2 mb-2">Our Academics</span>
                     <h2 class="h1 mb-4">Faculties & Departments</h2>
-                    <p class="lead mb-0 mx-auto" style="max-width: 600px;">Explore our diverse academic offerings across multiple disciplines, designed to prepare you for success in your chosen field</p>
+                    <p class="lead mb-0 mx-auto" style="max-width: 600px;">Explore our diverse academic offerings across
+                        multiple disciplines, designed to prepare you for success in your chosen field</p>
                 </div>
 
                 <div class="row" id="faculties-container">
@@ -170,7 +170,8 @@
                 <div class="text-center mb-5">
                     <span class="badge badge-success px-3 py-2 mb-2">Excellence in Education</span>
                     <h2 class="h1 mb-4">Academic Systems & Standards</h2>
-                    <p class="lead mb-0 mx-auto" style="max-width: 600px;">Our commitment to maintaining high academic standards and quality education</p>
+                    <p class="lead mb-0 mx-auto" style="max-width: 600px;">Our commitment to maintaining high academic
+                        standards and quality education</p>
                 </div>
 
                 <div class="row">
@@ -262,8 +263,11 @@
                                             <i class="fas fa-compass"></i>
                                         </div>
                                         <h4 class="support-title">Academic Advising</h4>
-                                        <p class="support-description">Get personalized guidance for your academic journey. Course selection assistance, academic planning, and career pathway guidance from experienced advisors.</p>
-                                        <a href="#" class="support-link">Schedule now <i class="fas fa-arrow-right"></i></a>
+                                        <p class="support-description">Get personalized guidance for your academic
+                                            journey. Course selection assistance, academic planning, and career pathway
+                                            guidance from experienced advisors.</p>
+                                        <a href="#" class="support-link">Schedule now <i
+                                                class="fas fa-arrow-right"></i></a>
                                     </div>
 
                                     <!-- Tutoring Services -->
@@ -272,8 +276,11 @@
                                             <i class="fas fa-chalkboard-teacher"></i>
                                         </div>
                                         <h4 class="support-title">Tutoring Services</h4>
-                                        <p class="support-description">Access free one-on-one tutoring, group sessions, and online tutoring support from qualified tutors to improve your performance.</p>
-                                        <a href="#" class="support-link">Find a tutor <i class="fas fa-arrow-right"></i></a>
+                                        <p class="support-description">Access free one-on-one tutoring, group sessions,
+                                            and online tutoring support from qualified tutors to improve your
+                                            performance.</p>
+                                        <a href="#" class="support-link">Find a tutor <i
+                                                class="fas fa-arrow-right"></i></a>
                                     </div>
 
                                     <!-- Learning Resources -->
@@ -282,8 +289,11 @@
                                             <i class="fas fa-laptop-code"></i>
                                         </div>
                                         <h4 class="support-title">Learning Resources</h4>
-                                        <p class="support-description">Access our comprehensive digital library, online learning platforms, and research databases to support your academic success.</p>
-                                        <a href="#" class="support-link">Explore more <i class="fas fa-arrow-right"></i></a>
+                                        <p class="support-description">Access our comprehensive digital library, online
+                                            learning platforms, and research databases to support your academic success.
+                                        </p>
+                                        <a href="#" class="support-link">Explore more <i
+                                                class="fas fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -369,7 +379,7 @@
                     <ul class="contact-info list-unstyled">
                         <li class="d-flex mb-3">
                             <i class="fas fa-map-marker-alt contact-icon"></i>
-                            <span class="text-white-50">123 University Avenue, Dhaka 1000, Bangladesh</span>
+                            <span class="text-white-50">19/1, Daffodil Concord Tower, West Panthapath, Dhaka 1205</span>
                         </li>
                         <li class="d-flex mb-3">
                             <i class="fas fa-phone contact-icon"></i>
@@ -459,15 +469,15 @@
                                                 </a>
                                             </div>
                                         `).join('')}
-                                        ${faculty.programs.length > 3 ? 
-                                            `<div class="program-list-item">
+                                        ${faculty.programs.length > 3 ?
+                                `<div class="program-list-item">
                                                 <a href="faculty-detail.html?id=${faculty.id}" 
                                                    class="text-muted text-decoration-none d-flex align-items-center">
                                                    <i class="fas fa-plus-circle mr-2"></i>
                                                    <span>${faculty.programs.length - 3} more programs</span>
                                                 </a>
                                             </div>` : ''
-                                        }
+                            }
                                     </div>
 
                                     <div class="faculty-stats">
@@ -505,7 +515,7 @@
                         </div>
                     `;
                 });
-            
+
             // Load Academic Calendar
             loadAcademicCalendar();
         });
@@ -520,7 +530,7 @@
                 'Medicine': 'fas fa-heartbeat',
                 'Technology': 'fas fa-microchip'
             };
-            
+
             for (const [key, icon] of Object.entries(icons)) {
                 if (facultyName.includes(key)) return icon;
             }
