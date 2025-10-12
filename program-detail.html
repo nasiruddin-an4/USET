@@ -110,7 +110,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
                                     <h2 class="h4 mb-0" id="department-name">Department</h2>
-                                    <p class="mb-0"><small>Degree: <span id="degree-type">Bachelor of
+                                    <p class="mb-0"><small class="text-white">Degree: <span id="degree-type">Bachelor of
                                                 Science</span></small></p>
                                 </div>
                                 <div>
@@ -316,6 +316,118 @@
             </div>
         </section>
 
+        <!-- Program Cost & Scholarships -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <!-- Tuition Fees -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-success text-white">
+                                <h3 class="h4 mb-0">Tuition & Fees</h3>
+                            </div>
+                            <div class="card-body" id="tuition-fees-container">
+                                <!-- Credit Hours -->
+                                <div class="mb-4">
+                                    <h4 class="h5 mb-3">Credit Hours</h4>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Total Credit Hours</span>
+                                        <span class="h5 text-success mb-0" id="total-program-credits">Loading...</span>
+                                    </div>
+                                </div>
+
+                               
+
+                                <!-- Per Credit Cost -->
+                                <div class="mb-4">
+                                    <h4 class="h5 mb-3">Per Credit Cost</h4>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Credit Hour Fee</span>
+                                        <span class="h5 text-success mb-0" id="credit-hour-cost">Loading...</span>
+                                    </div>
+                                </div>
+
+                                 <!-- One Time Fees -->
+                                <div class="mb-4">
+                                    <h4 class="h5 mb-3">One Time Fees</h4>
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span>Admission Fee</span>
+                                        <span class="h5 text-success mb-0" id="admission-fee">Loading...</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Project/Thesis Fee</span>
+                                        <span class="h5 text-success mb-0" id="project-fee">Loading...</span>
+                                    </div>
+                                </div>
+
+                                <!-- Total Tuition -->
+                                <div class="mb-4">
+                                    <h4 class="h5 mb-3">Total Tuition</h4>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Total Tuition Fee</span>
+                                        <span class="h5 text-success mb-0" id="total-tuition">Loading...</span>
+                                    </div>
+                                </div>
+
+                                <!-- Registration Fee -->
+                                <div class="mb-4">
+                                    <h4 class="h5 mb-3">Registration Fee (Per Semester)</h4>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Registration Fee</span>
+                                        <span class="h5 text-success mb-0" id="registration-fee">Loading...</span>
+                                    </div>
+                                </div>
+
+                                
+
+                                <!-- Total Cost -->
+                                <div class="alert alert-success mt-4">
+                                    <h4 class="h5 mb-3">Total Program Cost</h4>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Total Cost</span>
+                                        <span class="h5 text-success mb-0" id="total-cost">Calculating...</span>
+                                    </div>
+                                    <small class="d-block mt-2">* Total includes tuition, admission fee, registration fees (8 semesters), and project fee.</small>
+                                </div>
+
+                                <div class="alert alert-info mt-3">
+                                    <small>* All fees are in Bangladeshi Taka (BDT). Fees are subject to change. Please contact the admission office for the most current information.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scholarships -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-success text-white">
+                                <h3 class="h4 mb-0">Available Scholarships</h3>
+                            </div>
+                            <div class="card-body">
+                                <ul class="nav nav-tabs" id="scholarshipTabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="hsc-tab" data-toggle="tab" href="#hsc" role="tab">HSC</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="diploma-tab" data-toggle="tab" href="#diploma" role="tab">Diploma</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="alevel-tab" data-toggle="tab" href="#alevel" role="tab">A Level</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="sgpa-tab" data-toggle="tab" href="#sgpa" role="tab">SGPA</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content pt-4" id="scholarshipTabContent">
+                                    <!-- Content will be dynamically loaded -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Related Programs -->
         <section class="py-5 bg-light">
             <div class="container">
@@ -458,6 +570,11 @@
             const facultyId = urlParams.get('faculty');
             const programId = urlParams.get('program');
 
+            console.log('URL Parameters:', {
+                facultyId,
+                programId
+            });
+
             if (!facultyId || !programId) {
                 document.body.innerHTML = `
                     <div class="container mt-5 pt-5 text-center">
@@ -471,18 +588,14 @@
             }
 
             // Load program data
-            fetch('../data/programs.json')
+            fetch('./data/programs.json')
                 .then(response => response.json())
                 .then(data => {
                     const faculty = data.faculties.find(f => f.id === facultyId);
-                    if (!faculty) {
-                        throw new Error('Faculty not found');
-                    }
+                    console.log('Found faculty:', faculty);
 
                     const program = faculty.programs.find(p => p.id === programId);
-                    if (!program) {
-                        throw new Error('Program not found');
-                    }
+                    console.log('Found program:', program);
 
                     // Update breadcrumbs
                     document.getElementById('faculty-breadcrumb').textContent = faculty.name.split(' ').pop();
@@ -781,6 +894,214 @@
                     });
                 });
             }
+
+            // Load tuition and scholarship data
+            function loadTuitionAndScholarships() {
+                console.log('Loading tuition data...');
+                console.log('Current URL params:', {
+                    faculty: facultyId,
+                    program: programId
+                });
+
+                Promise.all([
+                    fetch('./data/tuition_scholarships.json'),
+                    fetch('./data/programs.json')
+                ])
+                    .then(responses => Promise.all(responses.map(res => res.json())))
+                    .then(([tuitionData, programsData]) => {
+                        const faculty = programsData.faculties.find(f => f.id === facultyId);
+                        const program = faculty.programs.find(p => p.id === programId);
+                        
+                        console.log('Found program:', program);
+                        
+                        // Map program to tuition fee key
+                        const programKey = mapProgramToTuitionKey(program.id);
+                        console.log('Mapped to tuition key:', programKey);
+
+                        // Log the data being used
+                        console.log('Program data:', {
+                            credits: tuitionData.tuitionFees.programCredits[programKey],
+                            perCredit: tuitionData.tuitionFees.undergraduatePerCredit[programKey],
+                            totalTuition: tuitionData.tuitionFees.totalTuitionFee[programKey]
+                        });
+
+                        // Credit Hours Section
+                        const totalCredits = tuitionData.tuitionFees.programCredits[programKey];
+                        const creditHoursSection = document.createElement('div');
+                        creditHoursSection.className = 'mb-4';
+                        creditHoursSection.innerHTML = `
+                            <h4 class="h5 mb-3">Total Credit Hours</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Total Credits</span>
+                                <span class="h5 text-success mb-0">${totalCredits}</span>
+                            </div>
+                        `;
+
+                        // One Time Fees Section
+                        const admissionFee = tuitionData.tuitionFees.otherFees.admissionFee;
+                        const projectFee = tuitionData.tuitionFees.otherFees.projectFees[programKey];
+                        const oneTimeFeeSection = document.createElement('div');
+                        oneTimeFeeSection.className = 'mb-4';
+                        oneTimeFeeSection.innerHTML = `
+                            <h4 class="h5 mb-3">One Time Fees</h4>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>Admission Fee</span>
+                                <span class="h5 text-success mb-0">৳${admissionFee.toLocaleString()}</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Project/Thesis Fee</span>
+                                <span class="h5 text-success mb-0">৳${projectFee.toLocaleString()}</span>
+                            </div>
+                        `;
+                        
+                        // Per Credit Cost Section
+                        const perCredit = tuitionData.tuitionFees.undergraduatePerCredit[programKey];
+                        const perCreditSection = document.createElement('div');
+                        perCreditSection.className = 'mb-4';
+                        perCreditSection.innerHTML = `
+                            <h4 class="h5 mb-3">Tuition Fee per Credit</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Per Credit Cost</span>
+                                <span class="h5 text-success mb-0">৳${perCredit.toLocaleString()}</span>
+                            </div>
+                        `;
+
+                        // Registration Fee Section
+                        const registrationFee = tuitionData.tuitionFees.otherFees.registrationFeePerSemester[programKey];
+                        const totalRegistrationFee = registrationFee * 8;
+                        const registrationSection = document.createElement('div');
+                        registrationSection.className = 'mb-4';
+                        registrationSection.innerHTML = `
+                            <h4 class="h5 mb-3">Registration Fee</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Per Semester Registration</span>
+                                <span class="h5 text-success mb-0">৳${registrationFee.toLocaleString()} × 8 = ৳${totalRegistrationFee.toLocaleString()}</span>
+                            </div>
+                        `;
+
+
+                        // Total Tuition Fee
+                        const totalTuition = tuitionData.tuitionFees.totalTuitionFee[programKey];
+                        const tuitionSection = document.createElement('div');
+                        tuitionSection.className = 'mb-4';
+                        tuitionSection.innerHTML = `
+                            <h4 class="h5 mb-3">Total Tuition Fee</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Total Tuition Fee</span>
+                                <span class="h5 text-success mb-0">৳${totalTuition.toLocaleString()}</span>
+                            </div>
+                        `;
+
+                        // Total Cost
+                        const totalCostSection = document.createElement('div');
+                        totalCostSection.className = 'alert alert-success mt-4';
+                        totalCostSection.innerHTML = `
+                            <h4 class="h5 mb-3">Total Program Cost</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Total Cost</span>
+                                <span class="h5 text-success mb-0">৳${(totalTuition + totalRegistrationFee + admissionFee + projectFee + 1000).toLocaleString()}</span>
+                            </div>
+                            <small class="d-block mt-2">* Includes total tuition fee, admission fee, registration fees for 8 semesters, and project fee.</small>
+                        `;
+
+                        // Clear and update the container
+                        const container = document.getElementById('tuition-fees-container');
+                        container.innerHTML = '';
+                        container.appendChild(creditHoursSection);
+                        container.appendChild(oneTimeFeeSection);
+                        container.appendChild(perCreditSection);
+                        container.appendChild(tuitionSection);
+                        container.appendChild(registrationSection);
+                        container.appendChild(totalCostSection);
+
+                        // Add disclaimer
+                        const disclaimer = document.createElement('div');
+                        disclaimer.className = 'alert alert-info mt-3';
+                        disclaimer.innerHTML = `
+                            <small>* All fees are in Bangladeshi Taka (BDT). Fees are subject to change. Please contact the admission office for the most current information.</small>
+                        `;
+                        container.appendChild(disclaimer);
+
+                        // Load scholarships
+                        loadScholarshipTabs(tuitionData.scholarships);
+                    })
+                    .catch(error => {
+                        console.error('Error loading tuition and scholarship data:', error);
+                        document.getElementById('tuition-fees-container').innerHTML = 
+                            '<p class="text-center text-muted">Error loading tuition information. Please try again later.</p>';
+                    });
+            }
+
+            // Update the mapping function to match the actual program IDs from programs.json
+            function mapProgramToTuitionKey(programId) {
+                console.log('Mapping program ID:', programId); // Debug log
+
+                const programMapping = {
+                    'cse': 'BSc_CSE',
+                    'bba': 'BBA',
+                    'english': 'BA_English',     // Updated to match programs.json
+                    'economics': 'BSS_Economics', // Updated to match programs.json
+                    'eee': 'BSc_EEE'
+                };
+                
+                const key = programMapping[programId];
+                if (!key) {
+                    console.error('Program ID not found in mapping:', programId);
+                    console.log('Available mappings:', programMapping);
+                    return Object.values(programMapping)[0];
+                }
+                
+                console.log('Mapped to key:', key);
+                return key;
+            }
+
+            function loadScholarshipTabs(scholarships) {
+                const tabContent = document.getElementById('scholarshipTabContent');
+                const scholarshipTypes = {
+                    'hsc': scholarships.find(s => s.criteria === 'SSC & HSC Results'),
+                    'diploma': scholarships.find(s => s.criteria === 'Diploma Results'),
+                    'alevel': scholarships.find(s => s.criteria === 'English Medium Results (O Level & A Level)'),
+                    'sgpa': scholarships.find(s => s.criteria === 'SGPA at University')
+                };
+
+                Object.entries(scholarshipTypes).forEach(([key, scholarship], index) => {
+                    const isActive = index === 0;
+                    const div = document.createElement('div');
+                    div.className = `tab-pane fade ${isActive ? 'show active' : ''}`;
+                    div.id = key;
+                    div.setAttribute('role', 'tabpanel');
+
+                    if (scholarship) {
+                        div.innerHTML = `
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Requirement</th>
+                                            <th class="text-center">Waiver</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${scholarship.benefits.map(benefit => `
+                                            <tr>
+                                                <td>${benefit.requirement}</td>
+                                                <td class="text-center text-success">${benefit.discount}%</td>
+                                            </tr>
+                                        `).join('')}
+                                    </tbody>
+                                </table>
+                            </div>
+                        `;
+                    } else {
+                        div.innerHTML = '<p class="text-center text-muted">No scholarship information available</p>';
+                    }
+
+                    tabContent.appendChild(div);
+                });
+            }
+
+            // Call the function after loading program details
+            loadTuitionAndScholarships();
         });
     </script>
 </body>
