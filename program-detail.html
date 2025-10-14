@@ -336,7 +336,7 @@
                                     </div>
                                 </div>
 
-                               
+
 
                                 <!-- Per Credit Cost -->
                                 <div class="mb-4">
@@ -347,7 +347,7 @@
                                     </div>
                                 </div>
 
-                                 <!-- One Time Fees -->
+                                <!-- One Time Fees -->
                                 <div class="mb-4">
                                     <h4 class="h5 mb-3">One Time Fees</h4>
                                     <div class="d-flex justify-content-between align-items-center mb-2">
@@ -378,7 +378,7 @@
                                     </div>
                                 </div>
 
-                                
+
 
                                 <!-- Total Cost -->
                                 <div class="alert alert-success mt-4">
@@ -387,11 +387,13 @@
                                         <span>Total Cost</span>
                                         <span class="h5 text-success mb-0" id="total-cost">Calculating...</span>
                                     </div>
-                                    <small class="d-block mt-2">* Total includes tuition, admission fee, registration fees (8 semesters), and project fee.</small>
+                                    <small class="d-block mt-2">* Total includes tuition, admission fee, registration
+                                        fees (8 semesters), and project fee.</small>
                                 </div>
 
                                 <div class="alert alert-info mt-3">
-                                    <small>* All fees are in Bangladeshi Taka (BDT). Fees are subject to change. Please contact the admission office for the most current information.</small>
+                                    <small>* All fees are in Bangladeshi Taka (BDT). Fees are subject to change. Please
+                                        contact the admission office for the most current information.</small>
                                 </div>
                             </div>
                         </div>
@@ -406,16 +408,20 @@
                             <div class="card-body">
                                 <ul class="nav nav-tabs" id="scholarshipTabs" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="hsc-tab" data-toggle="tab" href="#hsc" role="tab">HSC</a>
+                                        <a class="nav-link active" id="hsc-tab" data-toggle="tab" href="#hsc"
+                                            role="tab">HSC</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="diploma-tab" data-toggle="tab" href="#diploma" role="tab">Diploma</a>
+                                        <a class="nav-link" id="diploma-tab" data-toggle="tab" href="#diploma"
+                                            role="tab">Diploma</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="alevel-tab" data-toggle="tab" href="#alevel" role="tab">A Level</a>
+                                        <a class="nav-link" id="alevel-tab" data-toggle="tab" href="#alevel"
+                                            role="tab">A Level</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="sgpa-tab" data-toggle="tab" href="#sgpa" role="tab">SGPA</a>
+                                        <a class="nav-link" id="sgpa-tab" data-toggle="tab" href="#sgpa"
+                                            role="tab">SGPA</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content pt-4" id="scholarshipTabContent">
@@ -911,9 +917,9 @@
                     .then(([tuitionData, programsData]) => {
                         const faculty = programsData.faculties.find(f => f.id === facultyId);
                         const program = faculty.programs.find(p => p.id === programId);
-                        
+
                         console.log('Found program:', program);
-                        
+
                         // Map program to tuition fee key
                         const programKey = mapProgramToTuitionKey(program.id);
                         console.log('Mapped to tuition key:', programKey);
@@ -953,7 +959,7 @@
                                 <span class="h5 text-success mb-0">৳${projectFee.toLocaleString()}</span>
                             </div>
                         `;
-                        
+
                         // Per Credit Cost Section
                         const perCredit = tuitionData.tuitionFees.undergraduatePerCredit[programKey];
                         const perCreditSection = document.createElement('div');
@@ -999,7 +1005,7 @@
                             <h4 class="h5 mb-3">Total Program Cost</h4>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span>Total Cost</span>
-                                <span class="h5 text-success mb-0">৳${(totalTuition + totalRegistrationFee + admissionFee + projectFee + 1000).toLocaleString()}</span>
+                                <span class="h5 text-success mb-0">৳${(totalTuition + totalRegistrationFee + admissionFee + projectFee).toLocaleString()}</span>
                             </div>
                             <small class="d-block mt-2">* Includes total tuition fee, admission fee, registration fees for 8 semesters, and project fee.</small>
                         `;
@@ -1027,7 +1033,7 @@
                     })
                     .catch(error => {
                         console.error('Error loading tuition and scholarship data:', error);
-                        document.getElementById('tuition-fees-container').innerHTML = 
+                        document.getElementById('tuition-fees-container').innerHTML =
                             '<p class="text-center text-muted">Error loading tuition information. Please try again later.</p>';
                     });
             }
@@ -1043,14 +1049,14 @@
                     'economics': 'BSS_Economics', // Updated to match programs.json
                     'eee': 'BSc_EEE'
                 };
-                
+
                 const key = programMapping[programId];
                 if (!key) {
                     console.error('Program ID not found in mapping:', programId);
                     console.log('Available mappings:', programMapping);
                     return Object.values(programMapping)[0];
                 }
-                
+
                 console.log('Mapped to key:', key);
                 return key;
             }
